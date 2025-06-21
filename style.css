@@ -8,7 +8,6 @@ body {
   padding: 0;
   box-sizing: content-box;
   background-color: var(--primary);
-  min-height: 5000px;
 }
 
 html {
@@ -82,7 +81,7 @@ nav section:hover {
 }
 
 /* navbar-extra */
-.navbar-extra {
+.navbar-extra a {
   position: relative;
   padding-left: 2rem;
   color: #fff;
@@ -270,6 +269,7 @@ button:active {
 .location-card {
   padding-top: 5rem;
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .location-card .section-title {
@@ -321,6 +321,15 @@ button:active {
     transform: scaleX(0.2);
   }
 
+  .navbar-extra {
+    padding-left: 18rem;
+  }
+
+  .navbar-extra a {
+    color: #fff;
+    padding-left: 0.5rem;
+  }
+
   #menu {
     display: inline-block;
   }
@@ -350,5 +359,11 @@ button:active {
   /* Minuman */
   .section-title {
     padding-top: 2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  about-content p {
+    margin-bottom: 2rem;
   }
 }
