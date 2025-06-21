@@ -81,6 +81,18 @@ nav section:hover {
   color: var(--bg);
 }
 
+/* navbar-extra */
+.navbar-extra {
+  position: relative;
+  padding-left: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#menu {
+  display: none;
+}
+
 /* Home */
 .hero {
   text-align: center;
@@ -273,6 +285,44 @@ button:active {
 @media (max-width: 768px) {
   html {
     font-size: 80%;
+  }
+
+  /* navbar */
+  nav .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 20rem;
+    height: 100vh;
+    display: block;
+    font-family: "Ancizar Sans", sans-serif;
+  }
+
+  nav .navbar.active {
+    right: 0;
+    padding-left: 0.5rem;
+  }
+
+  nav .navbar a {
+    color: #080808;
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+
+  .navbar a::after {
+    transform-origin: 0 0;
+  }
+
+  nav .navbar a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  #menu {
+    display: inline-block;
   }
 
   /* Home */
