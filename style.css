@@ -15,8 +15,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
-nav {
+/* Navigation Block */
+.navigation {
   position: fixed;
   background-color: var(--latar);
   padding: 1rem 1rem;
@@ -28,35 +28,38 @@ nav {
   box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
-nav .logo {
+.navigation__logo {
   display: flex;
   color: #fff;
   font-size: 2rem;
   font-family: "Edu SA Hand", cursive;
 }
 
-nav .navbar {
+.navigation__menu {
   display: flex;
   list-style: none;
   gap: 2rem;
   font-size: 1.1em;
   justify-content: center;
   margin-left: auto;
+  align-items: center;
 }
 
-nav .navbar a {
+.navigation__link {
   text-decoration: none;
+  margin-top: 10px;
+  display: block;
   color: #ffffff;
   font-weight: 500;
   transition: color 0.5s ease;
   font-family: "Ancizar Sans", sans-serif;
 }
 
-nav .navbar a:hover {
+.navigation__link:hover {
   color: var(--bg);
 }
 
-nav .navbar a::after {
+.navigation__link::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
@@ -65,11 +68,11 @@ nav .navbar a::after {
   transition: 0.2s linear;
 }
 
-nav .navbar a:hover::after {
+.navigation__link:hover::after {
   transform: scaleX(0.5);
 }
 
-nav section {
+.navigation__section {
   position: relative;
   padding-left: 2rem;
   color: #fff;
@@ -77,23 +80,32 @@ nav section {
   cursor: pointer;
 }
 
-nav section:hover {
+.navigation__section:hover {
   color: var(--bg);
 }
 
-/* navbar-extra */
-.navbar-extra a {
-  position: relative;
-  padding-left: 2rem;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
+/* Navigation Extra */
+.navigation__extra {
+  display: flex;
+  align-items: center;
 }
-#menu {
+
+.navigation__button {
+  position: relative;
+  margin-left: 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.navigation__button--menu {
   display: none;
 }
 
-/* Home */
+/* Hero Block */
 .hero {
   text-align: center;
   padding: 15rem;
@@ -103,31 +115,31 @@ nav section:hover {
   position: relative;
 }
 
-.hero .gradient {
+.hero__gradient {
   position: absolute;
   background-image: linear-gradient(transparent 60%, var(--latar));
   inset: 0;
 }
 
-.hero-content {
+.hero__content {
   position: relative;
   z-index: 1;
 }
 
-.hero-content h1 {
+.hero__title {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-family: "Edu NSW ACT Hand Pre", cursive;
   color: #fff;
 }
 
-.hero-content p {
+.hero__subtitle {
   font-size: 1rem;
   font-family: "Edu NSW ACT Hand Pre", cursive;
   color: #fff;
 }
 
-.btn-secondary {
+.hero__button {
   display: inline-block;
   padding: 0.8rem 1.8rem;
   border-radius: 5px;
@@ -136,26 +148,23 @@ nav section:hover {
   transition: all 0.3s ease;
   margin: 0.5rem;
   cursor: pointer;
-}
-
-.btn-secondary {
   background-color: var(--latar);
   color: #fff;
 }
 
-.btn-secondary:hover {
+.hero__button:hover {
   color: var(--bg);
   transform: translateY(-3px);
 }
 
-/* Sejarah Toko */
+/* About Block */
 .about {
   position: relative;
   max-width: 60rem;
   margin: auto;
 }
 
-.about-section {
+.about__title {
   color: #1d1d1d;
   padding: 10rem 7% 1rem;
   text-align: center;
@@ -166,7 +175,7 @@ nav section:hover {
   position: relative;
 }
 
-.about-content {
+.about__content {
   padding: 0.3rem 7%;
   font-size: 1rem;
   color: #000000;
@@ -177,71 +186,81 @@ nav section:hover {
   padding-left: 6.5rem;
 }
 
-.about-content p {
+.about__text {
   width: 90%;
+  font-size: 1.4rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.about img {
+.about__image {
   width: 100%;
   position: absolute;
   top: 0;
 }
 
-/* Menu MAkanan */
-.makanan-card {
-  margin-top: 15rem;
-  scroll-margin-top: 10rem;
+/* Menu Block */
+.menu {
+  scroll-margin-top: 2rem;
 }
 
-.section-title {
+.menu--food {
+  margin-top: 20rem;
+  scroll-margin-top: 8rem;
+}
+
+.menu--drink {
+  padding-top: 5rem;
+}
+
+.menu__title {
   text-align: center;
   font-size: 2rem;
   color: #fff;
   font-family: "Noto Sans", sans-serif;
 }
 
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.menu__grid {
+  display: grid;
+  padding-inline: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
-.projects-grid .project-card {
+.menu__card {
   border-radius: 20px;
   backdrop-filter: blur(20px);
   background: transparent;
   color: rgb(255, 255, 255);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
-  max-width: 25%;
-  margin: 10px;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
   font-family: "Noto Sans", sans-serif;
 }
 
-.projects-grid .project-card img {
+.menu__image {
+  border-radius: 10px;
   width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
-.project-card img .src {
-  position: fixed;
-  border: 10px solid rgb(255, 255, 255);
-  width: 50%;
+.menu__info {
+  padding: 1rem 0;
 }
 
-.project-info h2 {
+.menu__name {
   font-size: 1.5rem;
   text-align: center;
+  margin: 0;
 }
 
-.project-info p {
+.menu__price {
   text-align: center;
+  margin: 0.5rem 0;
 }
 
-/* Makanan (button) */
-button {
+.menu__button {
   border-radius: 0.5rem;
   margin-top: 10px;
   margin-right: 10px;
@@ -255,41 +274,196 @@ button {
   transition: all 0.2s;
 }
 
-button:active {
+.menu__button:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
   transform: translateY(-3px);
 }
 
-/* Minuman */
-.minuman-card {
-  padding-top: 5rem;
-}
-
-/* Lokasi */
-.location-card {
+/* Location Block */
+.location {
   padding-top: 5rem;
   text-align: center;
   margin-bottom: 5rem;
 }
 
-.location-card .section-title {
+.location__title {
   font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
 }
-.location-card iframe {
+
+.location__map {
   width: 90%;
   aspect-ratio: 16/9;
 }
-/* media Queries */
+
+/* Cart Block */
+.cart__button[data-count]:after {
+  content: attr(data-count);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.cart__panel {
+  font-family: "Nunito Sans", sans-serif;
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 8px;
+}
+
+.cart__panel--hidden {
+  display: none;
+}
+
+.cart__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart__item--empty {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  justify-content: center;
+}
+
+.cart__item-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.cart__item-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cart__item-price {
+  color: #666;
+  font-size: 12px;
+}
+
+.cart__item-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart__quantity-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.cart__quantity-btn:hover {
+  background: #0056b3;
+}
+
+.cart__quantity {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cart__remove-button {
+  background: none;
+  font-size: 1.2rem;
+  border: none;
+  color: red;
+  cursor: pointer;
+  padding: 2px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__remove-button:hover {
+  color: darkred;
+}
+
+.cart__total {
+  border-top: 2px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-bottom: none;
+}
+
+.cart__total-info {
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  color: #333;
+}
+
+#checkout-btn {
+  width: 100%;
+  background: var(--latar);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+#checkout-btn:hover {
+  background: #7a0808;
+}
+
+/* Media Queries */
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (width <= 48rem) {
   html {
     font-size: 80%;
   }
 
-  /* navbar */
-  nav .navbar {
+  /* Navigation */
+  .navigation__menu {
     position: absolute;
     top: 100%;
     right: -100%;
@@ -300,12 +474,12 @@ button:active {
     font-family: "Ancizar Sans", sans-serif;
   }
 
-  nav .navbar.active {
+  .navigation__menu--active {
     right: 0;
     padding-left: 0.5rem;
   }
 
-  nav .navbar a {
+  .navigation__link {
     color: #080808;
     display: block;
     margin: 1rem;
@@ -314,57 +488,96 @@ button:active {
     margin-left: 0;
   }
 
-  .navbar a::after {
+  .navigation__link::after {
     transform-origin: 0 0;
   }
 
-  nav .navbar a:hover::after {
+  .navigation__link:hover::after {
     transform: scaleX(0.2);
   }
 
-  .navbar-extra {
+  .navigation__extra {
     padding-left: 18rem;
   }
 
-  .navbar-extra a {
+  .navigation__button {
     color: #fff;
-    padding-left: 0.5rem;
+    font-size: 2rem;
   }
 
-  #menu {
+  .navigation__button--menu {
     display: inline-block;
   }
 
-  /* Home */
+  /* Hero */
   .hero {
     height: 25rem;
+  }
+
+  /* Menu */
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cart */
+  .cart__panel {
+    width: 280px;
+    right: 5px;
   }
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (width <= 40rem) {
   html {
     font-size: 60%;
   }
 
-  /* Home */
+  /* Hero */
   .hero {
     height: 45rem;
   }
 
-  /* Sejarah Toko */
-  .about-section {
+  /* About */
+  .about__title {
     padding-top: 6rem;
   }
 
-  /* Minuman */
-  .section-title {
+  .about__text {
+    font-size: 0.8rem;
+  }
+
+  /* Menu */
+  .menu__title {
     padding-top: 2rem;
+  }
+
+  .menu__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Cart */
+  .cart__panel {
+    width: 250px;
+    right: 5px;
+  }
+
+  .cart__item-controls {
+    gap: 5px;
+  }
+
+  .cart__quantity-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 380px) {
-  about-content p {
+  .about__text {
     margin-bottom: 2rem;
+  }
+
+  .cart__panel {
+    width: 220px;
   }
 }
