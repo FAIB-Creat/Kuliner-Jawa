@@ -42,10 +42,13 @@ nav .navbar {
   font-size: 1.1em;
   justify-content: center;
   margin-left: auto;
+  align-items: center;
 }
 
 nav .navbar a {
   text-decoration: none;
+  margin-top: 10px;
+  display: block;
   color: #ffffff;
   font-weight: 500;
   transition: color 0.5s ease;
@@ -82,12 +85,15 @@ nav section:hover {
 }
 
 /* navbar-extra */
-.navbar-extra a {
+.navbar-extra button {
   position: relative;
-  padding-left: 2rem;
+  margin-left: 2rem;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
 }
 #menu {
   display: none;
@@ -203,9 +209,10 @@ nav section:hover {
 }
 
 .projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  padding-inline: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
 .projects-grid .project-card {
@@ -214,14 +221,13 @@ nav section:hover {
   background: transparent;
   color: rgb(255, 255, 255);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
-  max-width: 25%;
-  margin: 10px;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
   font-family: "Noto Sans", sans-serif;
 }
 
 .projects-grid .project-card img {
+  border-radius: 10px;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
@@ -382,9 +388,9 @@ button:active {
     padding-left: 18rem;
   }
 
-  .navbar-extra a {
+  .navbar-extra button {
     color: #fff;
-    padding-left: 0.5rem;
+    font-size: 2rem;
   }
 
   #menu {
@@ -394,6 +400,11 @@ button:active {
   /* Home */
   .hero {
     height: 25rem;
+  }
+
+  /* Menu */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -416,6 +427,11 @@ button:active {
   /* Minuman */
   .section-title {
     padding-top: 2rem;
+  }
+
+  /* Menu */
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
