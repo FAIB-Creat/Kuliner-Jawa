@@ -9,8 +9,16 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-NSDyzys4DQiVMQAJ"
+    ></script>
+
     <title>Aneka Makanan</title>
   </head>
+
   <body>
     <!-- Navbar -->
     <nav>
@@ -24,11 +32,11 @@
       </section>
 
       <div class="navbar-extra">
-       <a href="#home" id="cart"><i class="bx bx-cart"></i></a>
-       <a href="#home" id="menu"><i class="bx  bx-menu"></i></a>
+        <a href="#home" id="cart"><i class="bx bx-cart"></i></a>
+        <a href="#home" id="menu"><i class="bx bx-menu"></i></a>
       </div>
-  </nav>
-  
+    </nav>
+
     <!-- Home -->
     <section id="home" class="hero">
       <div class="gradient"></div>
@@ -61,99 +69,51 @@
       <img src="image/latar-sejarah.png" />
     </section>
 
-    <!-- Makanan -->
-    <head>
-      <section id="makanan" class="makanan-card">
-        <h2 class="section-title">Menu Makanan</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="image/makan1.jpg" alt="makan 1" />
-            <div class="project-info">
-              <h2>Sate</h2>
-              <p>Rp.10.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="image/makanan2.jpg" alt="makanan 2" />
-            <div class="project-info">
-              <h2>Tempo Mendoan</h2>
-              <p>Rp.5.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="image/makanan3.jpg" alt="makanan 3" />
-            <div class="project-info">
-              <h2>Nasi Liwet</h2>
-              <p>Rp.20.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="image/makanan4.jpg" alt="makanan 4" />
-            <div class="project-info">
-              <h2>Rawon</h2>
-              <p>Rp.15.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
+    <!-- Menu Template -->
+    <template id="menu-template">
+      <div class="project-card">
+        <img src="" alt="" />
+        <div class="project-info">
+          <h2 class="menu-name"></h2>
+          <p class="menu-price"></p>
+          <button>Beli</button>
         </div>
-      </section>
-    </head>
+      </div>
+    </template>
+
+    <!-- Makanan -->
+    <section id="makanan" class="makanan-card">
+      <h2 class="section-title">Menu Makanan</h2>
+      <div class="projects-grid"></div>
+    </section>
 
     <!-- Minuman -->
-    <head>
-      <section id="minuman" class="minuman-card">
-        <h2 class="section-title">Menu Minuman</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="image/minuman1.jpg" alt="minuman 1" />
-            <div class="project-info">
-              <h2>Air AQUA</h2>
-              <p>Rp.5.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="image/minuman2.jpg" alt="minuman 2" />
-            <div class="project-info">
-              <h2>Es Teh</h2>
-              <p>Rp.5.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="image/minuman3.jpg" alt="minuman 3" />
-            <div class="project-info">
-              <h2>Es Jeruk</h2>
-              <p>Rp.7.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-          <div class="project-card">
-            <img src="image/minuman4.jpg" alt="minuman 4" />
-            <div class="project-info">
-              <h2>Jus Strawberry</h2>
-              <p>Rp.10.000</p>
-              <button>Beli</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </head>
+    <section id="minuman" class="minuman-card">
+      <h2 class="section-title">Menu Minuman</h2>
+      <div class="projects-grid"></div>
+    </section>
 
     <!-- Lokasi -->
-     <section id="location" class="location-card">
+    <section id="location" class="location-card">
       <h2 class="section-title">Lokasi</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.9837194926!2d110.33364490937157!3d-7.803163418814414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1750446749663!5m2!1sid!2sid"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.9837194926!2d110.33364490937157!3d-7.803163418814414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1750446749663!5m2!1sid!2sid"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <div id="cart-panel" class="cart-panel hidden">
+      <h3>Keranjang</h3>
+      <ul id="cart-items"></ul>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+
+    <div id="snap-container"></div>
 
     <!-- My javascript -->
-     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="data.js"></script>
   </body>
 </html>

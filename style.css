@@ -223,6 +223,8 @@ nav section:hover {
 
 .projects-grid .project-card img {
   width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .project-card img .src {
@@ -280,6 +282,60 @@ button:active {
   width: 90%;
   aspect-ratio: 16/9;
 }
+
+/* Cart */
+
+#cart[data-count]:after {
+  content: attr(data-count);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.cart-panel {
+  font-family: "Nunito Sans", sans-serif;
+  position: fixed;
+  right: 10px;
+  top: 70px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.cart-panel.hidden {
+  display: none;
+}
+
+.cart-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-panel li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cart-panel li button {
+  background: none;
+  font-size: 1.4rem;
+  border: none;
+  color: red;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
 /* media Queries */
 
 /* Tablet */
