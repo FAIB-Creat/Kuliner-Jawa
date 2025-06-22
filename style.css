@@ -551,10 +551,6 @@ html {
     padding-top: 2rem;
   }
 
-  .menu__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   /* Cart */
   .cart__panel {
     width: 250px;
