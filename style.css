@@ -188,6 +188,7 @@ html {
 
 .about__text {
   width: 90%;
+  text-align: justify;
   font-size: 1.4rem;
   margin-top: 0;
   margin-bottom: 0;
