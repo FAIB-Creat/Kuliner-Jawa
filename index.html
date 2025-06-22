@@ -20,93 +20,96 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav>
-      <div class="logo">Warung Tempat Makan</div>
-      <section class="navbar" id="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Sejarah Toko</a></li>
-        <li><a href="#makanan">Makanan</a></li>
-        <li><a href="#minuman">Minuman</a></li>
-        <li><a href="#location">Lokasi</a></li>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="navigation__logo">Warung Tempat Makan</div>
+      <section class="navigation__menu" id="navbar">
+        <li><a href="#home" class="navigation__link">Home</a></li>
+        <li><a href="#about" class="navigation__link">Sejarah Toko</a></li>
+        <li><a href="#makanan" class="navigation__link">Makanan</a></li>
+        <li><a href="#minuman" class="navigation__link">Minuman</a></li>
+        <li><a href="#location" class="navigation__link">Lokasi</a></li>
       </section>
 
-      <div class="navbar-extra">
-        <button id="cart"><i class="bx bx-cart"></i></button>
-        <button id="menu"><i class="bx bx-menu"></i></button>
+      <div class="navigation__extra">
+        <button id="cart" class="navigation__button cart__button">
+          <i class="bx bx-cart"></i>
+        </button>
+        <button id="menu" class="navigation__button navigation__button--menu">
+          <i class="bx bx-menu"></i>
+        </button>
       </div>
     </nav>
 
-    <!-- Home -->
+    <!-- Hero -->
     <section id="home" class="hero">
-      <div class="gradient"></div>
-      <div class="hero-content">
-        <h1>SELAMAT DATANG</h1>
-        <p>Rasa Nusantara</p>
-        <a href="#makanan" class="btn-secondary">Beli Sekarang</a>
+      <div class="hero__gradient"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">SELAMAT DATANG</h1>
+        <p class="hero__subtitle">Rasa Nusantara</p>
+        <a href="#makanan" class="hero__button">Beli Sekarang</a>
       </div>
     </section>
 
-    <!-- Sejarah Toko -->
+    <!-- About -->
     <section id="about" class="about">
-      <h2 class="about-section">Sejarah Toko</h2>
-      <div class="about-content">
-        <h4>
-          <p>
-            Toko Masakan Jawa Rasa Nusantara berdiri pada tahun 2005 di sebuah
-            sudut sederhana di Kota Yogyakarta.Terinspirasi oleh resep-resep
-            turun-temurun dari keluarga, mereka mulai memasak dan menjual
-            masakan khas Jawa seperti gudeg, opor ayam, rawon, tempe bacem, dan
-            sayur lodeh kepada tetangga dan kerabat sekitar. Berbekal cita rasa
-            otentik dan harga yang terjangkau, toko kecil tersebut mulai dikenal
-            luas. Dalam waktu dua tahun, mereka mampu membuka warung makan kecil
-            yang selalu ramai dikunjungi oleh mahasiswa, pekerja, dan wisatawan.
-            Pelayanan yang ramah dan masakan yang selalu segar membuat Rasa
-            Nusantara menjadi pilihan utama pencinta kuliner tradisional Jawa.
-          </p>
-        </h4>
+      <h2 class="about__title">Sejarah Toko</h2>
+      <div class="about__content">
+        <p class="about__text">
+          Toko Masakan Jawa Rasa Nusantara berdiri pada tahun 2005 di sebuah
+          sudut sederhana di Kota Yogyakarta.Terinspirasi oleh resep-resep
+          turun-temurun dari keluarga, mereka mulai memasak dan menjual masakan
+          khas Jawa seperti gudeg, opor ayam, rawon, tempe bacem, dan sayur
+          lodeh kepada tetangga dan kerabat sekitar. Berbekal cita rasa otentik
+          dan harga yang terjangkau, toko kecil tersebut mulai dikenal luas.
+          Dalam waktu dua tahun, mereka mampu membuka warung makan kecil yang
+          selalu ramai dikunjungi oleh mahasiswa, pekerja, dan wisatawan.
+          Pelayanan yang ramah dan masakan yang selalu segar membuat Rasa
+          Nusantara menjadi pilihan utama pencinta kuliner tradisional Jawa.
+        </p>
       </div>
-      <img src="image/latar-sejarah.png" />
+      <img src="image/latar-sejarah.png" class="about__image" />
     </section>
 
     <!-- Menu Template -->
     <template id="menu-template">
-      <div class="project-card">
-        <img src="" alt="" />
-        <div class="project-info">
-          <h2 class="menu-name"></h2>
-          <p class="menu-price"></p>
-          <button>Beli</button>
+      <div class="menu__card">
+        <img src="" alt="" class="menu__image" />
+        <div class="menu__info">
+          <h2 class="menu__name"></h2>
+          <p class="menu__price"></p>
+          <button class="menu__button">Beli</button>
         </div>
       </div>
     </template>
 
-    <!-- Makanan -->
-    <section id="makanan" class="makanan-card">
-      <h2 class="section-title">Menu Makanan</h2>
-      <div class="projects-grid"></div>
+    <!-- Food Menu -->
+    <section id="makanan" class="menu menu--food">
+      <h2 class="menu__title">Menu Makanan</h2>
+      <div class="menu__grid"></div>
     </section>
 
-    <!-- Minuman -->
-    <section id="minuman" class="minuman-card">
-      <h2 class="section-title">Menu Minuman</h2>
-      <div class="projects-grid"></div>
+    <!-- Drink Menu -->
+    <section id="minuman" class="menu menu--drink">
+      <h2 class="menu__title">Menu Minuman</h2>
+      <div class="menu__grid"></div>
     </section>
 
-    <!-- Lokasi -->
-    <section id="location" class="location-card">
-      <h2 class="section-title">Lokasi</h2>
+    <!-- Location -->
+    <section id="location" class="location">
+      <h2 class="location__title">Lokasi</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.9837194926!2d110.33364490937157!3d-7.803163418814414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1750446749663!5m2!1sid!2sid"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
+        class="location__map"
       ></iframe>
     </section>
 
-    <div id="cart-panel" class="cart-panel hidden">
+    <div id="cart-panel" class="cart__panel cart__panel--hidden">
       <h3>Keranjang</h3>
-      <ul id="cart-items"></ul>
+      <ul id="cart-items" class="cart__list"></ul>
       <button id="checkout-btn">Checkout</button>
     </div>
 
@@ -114,6 +117,5 @@
 
     <!-- My javascript -->
     <script src="script.js"></script>
-    <script src="data.js"></script>
   </body>
 </html>
