@@ -1,13 +1,14 @@
 :root {
   --primary: #471f0a;
   --bg: #6b6969;
+  --latar: #970c0c;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
-  background-color: var(--primary);
+  background-color: var(--latar);
 }
 
 html {
@@ -17,7 +18,7 @@ html {
 /* Navbar */
 nav {
   position: fixed;
-  background-color: var(--primary);
+  background-color: var(--latar);
   padding: 1rem 1rem;
   z-index: 1000;
   display: flex;
@@ -104,7 +105,7 @@ nav section:hover {
 
 .hero .gradient {
   position: absolute;
-  background-image: linear-gradient(transparent 60%, var(--primary));
+  background-image: linear-gradient(transparent 60%, var(--latar));
   inset: 0;
 }
 
@@ -138,7 +139,7 @@ nav section:hover {
 }
 
 .btn-secondary {
-  background-color: var(--primary);
+  background-color: var(--latar);
   color: #fff;
 }
 
